@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Result</title>
+
+  <script src="https://kit.fontawesome.com/47101d2035.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <style>
+      span{
+        text-transform: uppercase;
+        font-size: 60px;
+        color: rgb(226, 225, 230);
+      } 
+  
+      .center {
+        position: absolute;
+        text-align: center;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: rgb(88, 90, 90);
+      }
+      h1{
+        color: azure;
+        text-transform: capitalize;
+      }
+    </style>
+  </style>
+</head>
+
+<body class="center">
+  {% if result == 'A' %} 
+    <h1>Class A: Affluent Professional</h1>
+    <img src="{% static 'images/1.png' %}" class="img-fluid"  width="300" height="300" alt="Responsive image"><br><br>
+    <p style="color: rgb(191, 186, 204); font-weight: 900;"> <strong>DESCRIPTION:</strong> <br>Customers in this segment are typically affluent professionals who are well-established in their careers and have higher spending scores. They are likely to be older, married or in committed relationships, and highly educated. They often belong to managerial or executive positions and may have a smaller family size due to their focus on career advancement. They are open to spending on premium products and services.<br>
+  {% elif result == 'B' %} 
+    <h1>Class B: Young and Upcoming</h1>
+    <img src="{% static 'images/2.png' %}" class="img-fluid"  width="300" height="300" alt="Responsive image"><br><br>
+    <p style="color: rgb(191, 186, 204); font-weight: 900;"> <strong>DESCRIPTION:</strong> <br>This segment comprises younger individuals who are early in their careers or education. They may be single or recently married, with moderate spending scores. Many of them have graduated or are in the process of completing their education. They have varied professions and may have some work experience, but not at senior levels yet. They are more price-conscious and may prioritize value for money in their purchases.<br>
+  {% elif result == 'C' %} 
+    <h1>Class C: Established Families</h1>
+    <img src="{% static 'images/3.jpg' %}" class="img-fluid"  width="300" height="300" alt="Responsive image"><br><br>
+    <p style="color: rgb(191, 186, 204); font-weight: 900;"> <strong>DESCRIPTION:</strong> <br>Customers in this segment are typically middle-aged or older, married, and have moderate to large family sizes. They are likely to be homeowners and have stable careers with moderate spending scores. Many of them are well-educated and have graduated from higher education institutions. They value family-oriented products and services and prioritize spending on necessities and experiences for their families.<br>
+  {% else %}
+    <h1>Class D: Budget-Conscious Seniors</h1>
+    <img src="{% static 'images/4.jpg' %}" class="img-fluid"  width="300" height="300" alt="Responsive image"><br><br>
+    <p style="color: rgb(191, 186, 204); font-weight: 900;"> <strong>DESCRIPTION:</strong> <br>This segment consists of older individuals, often retirees or close to retirement age, with smaller family sizes. They may be widowed, divorced, or living alone. They have lower spending scores and may have retired from their professions or have limited work experience. They are price-sensitive and tend to prioritize savings and value in their purchases. They may also be more conservative in their lifestyle choices.<br>
+  {% endif %}
+</body>
+
+</html>
